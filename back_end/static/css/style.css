@@ -505,8 +505,9 @@ section {
   transition: .3s ease;
 }
 .image-icon svg {
-  width: 20px;
-  height: 20px;
+    z-index: 1000;
+    width: 20px;
+    height: 20px;
 }
 .image-icon:hover {
   background: rgba(0, 0, 0, 0.75);
