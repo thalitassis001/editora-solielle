@@ -473,6 +473,46 @@ section {
 .grid.cards {
     grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
 }
+
+.image-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.cover {
+  width: 100%;
+  display: block;
+}
+
+.image-icon {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+
+  width: 38px;
+  height: 38px;
+
+  background: rgba(0, 0, 0, 0.5);
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  transition: .3s ease;
+}
+.image-icon svg {
+  width: 20px;
+  height: 20px;
+}
+.image-icon:hover {
+  background: rgba(0, 0, 0, 0.75);
+  transform: scale(1.1);
+}
 .card {
     background: var(--bg-color);
     border: 1px solid #C5C5C5;

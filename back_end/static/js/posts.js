@@ -144,6 +144,15 @@ document.addEventListener('DOMContentLoaded', () => {
       articlesGrid.innerHTML = ARTICLES_DATA.map(a => `
         <div class="article-item">
           <img src="${a.img}" alt="Imagem de artigo" class="article-img" data-caption="${escapeHtml(a.caption || '')}">
+          <div class="image-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+              <path 
+                fill="#ffffff"
+                fill-rule="evenodd"
+                d="M6.46857 4.2814..."
+              ></path>
+            </svg>
+          </div>
           <p class="article-caption">${a.caption || ''}</p>
         </div>
       `).join('');
