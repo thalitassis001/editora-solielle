@@ -2,7 +2,6 @@ import os
 from sqlalchemy import create_engine
 from sqlalchemy.orm import scoped_session, sessionmaker, declarative_base
 from dotenv import load_dotenv
-from seed import seed_db
 
 DATABASE_URL = os.environ.get('DATABASE_URL')
 
@@ -23,7 +22,8 @@ load_dotenv()
 
 def init_db():
     import models
-    Base.metadata.drop_all(bind=engine)
+    from seed import seed_db
+
     Base.metadata.create_all(bind=engine)
     try:
         seed_db()

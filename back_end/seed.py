@@ -1,7 +1,7 @@
 def seed_db():
     print("RODANDO 🏵️")
-    from back_end.database import db_session, engine
-    from back_end.models import Base, Book, Author, Post, Launch, Recommendation, Article
+    from database import db_session, engine
+    from models import Base, Book, Author, Post, Launch, Recommendation, Article
     from datetime import datetime, timezone, timedelta
 
     Base.metadata.create_all(bind=engine)
