@@ -477,7 +477,9 @@ section {
 .image-wrapper {
   position: relative;
   width: 100%;
-  overflow: hidden;
+}
+.image-wrapper:hover .cover {
+    filter: grayscale(0);
 }
 
 .cover {
@@ -501,7 +503,7 @@ section {
   align-items: center;
   justify-content: center;
 
-  cursor: pointer;
+  z-index: 10;
 
   transition: .3s ease;
 }
@@ -534,9 +536,6 @@ section {
         filter: none;
     }
 }
-.card .cover:hover {
-    filter: grayscale(0);
-}
 .card .body {
     padding: .9rem;
     display: flex;
@@ -553,9 +552,7 @@ section {
     opacity: .8;
 }
 .card:hover {
-  filter: blur(0) brightness(1);
   transform: scale(1.05);
-  z-index: 10; 
 }
 .qty-control {
     display: flex;
@@ -702,4 +699,5 @@ footer a {
     .post{ grid-template-columns: 1fr; }
     .about{ grid-template-columns: 1fr; }
     /* .searchbar{ width: min(480px, 70vw); } */
+
 }
