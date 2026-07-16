@@ -478,9 +478,6 @@ section {
   position: relative;
   width: 100%;
 }
-.image-wrapper:hover .cover {
-    filter: grayscale(0);
-}
 
 .cover {
   width: 100%;
@@ -503,7 +500,7 @@ section {
   align-items: center;
   justify-content: center;
 
-  z-index: 10;
+  z-index: 100;
 
   transition: .3s ease;
 }
@@ -536,6 +533,9 @@ section {
         filter: none;
     }
 }
+.card:hover .cover {
+    filter: grayscale(0);
+}
 .card .body {
     padding: .9rem;
     display: flex;
@@ -552,6 +552,7 @@ section {
     opacity: .8;
 }
 .card:hover {
+  filter: blur(0) brightness(1);
   transform: scale(1.05);
 }
 .qty-control {
