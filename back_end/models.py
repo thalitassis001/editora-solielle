@@ -1,4 +1,4 @@
-from back_end.database import Base
+from database import Base
 from sqlalchemy import Column, Integer, String, Float, Text, DateTime
 from datetime import datetime, timezone
 from sqlalchemy.sql import func

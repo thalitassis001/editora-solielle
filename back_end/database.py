@@ -2,7 +2,7 @@ import os
 from sqlalchemy import create_engine
 from sqlalchemy.orm import scoped_session, sessionmaker, declarative_base
 from dotenv import load_dotenv
-from back_end.seed import seed_db
+from seed import seed_db
 
 DATABASE_URL = os.environ.get('DATABASE_URL')
 
