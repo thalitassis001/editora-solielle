@@ -22,7 +22,7 @@ Base.query = db_session.query_property()
 load_dotenv()
 
 def init_db():
-    from back_end import models
+    import models
     Base.metadata.drop_all(bind=engine)
     Base.metadata.create_all(bind=engine)
     try:
