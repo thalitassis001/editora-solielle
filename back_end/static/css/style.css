@@ -465,6 +465,31 @@ section {
     padding: 2.6rem 0;
 }
 
+.container{
+    text-align:center;
+    width:90%;
+    max-width:650px;
+
+    h1{
+        font-size:80px;
+        margin-bottom:20px;
+    }
+    h2{
+        font-size:36px;
+        margin-bottom:20px;
+    }
+    p{
+        color:#cfcfcf;
+        line-height:1.8;
+        font-size:18px;
+    }
+}
+
+.small{
+    margin-top:30px;
+    color:#8f8f8f;
+}
+
 .grid {
     display: grid;
     gap: 2rem;
