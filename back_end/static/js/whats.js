@@ -30,13 +30,15 @@ function openModal(book) {
   modalAuthor.textContent = book.author;
   modalGenre.textContent = book.genre;
   modalSinopse.textContent = book.synopsis;
-  modalPrice.textContent = `R$ ${book.price}`;
+  modalPrice.textContent = `R$ ${parseFloat(book.price).toFixed(2).replace(".", ",")}`;
 
-  document.getElementById("modalBuy").onclick = () => {
+  const modalBuy = document.getElementById("modalBuy");
+
+  modalBuy.onclick = () => {
     sendWhats(book.title, book.price);
   };
 
-  modal.classList.add("show");
+  modal.style.display = "flex";
 }
 
 function finalizePurchase() {
