@@ -10,6 +10,11 @@ CORS(app)
 
 MAINTENANCE_MODE = True
 
+@app.before_request
+def maintenance():
+    if MAINTENANCE_MODE:
+        return render_template("maintenance.html"), 503
+    
 with app.app_context():
     init_db()
 
@@ -21,10 +26,6 @@ def shutdown_session(exception=None):
 def index():
     return render_template('index.html')
 
-@app.before_request
-def maintenance():
-    if MAINTENANCE_MODE:
-        return render_template("maintenance.html"), 503
 
 @app.route('/api/novidades')
 def novidades():
