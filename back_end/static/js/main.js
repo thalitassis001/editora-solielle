@@ -134,7 +134,7 @@ const renderBooks = (list) => {
           <div class="meta">${b.author} • ${b.genre}</div>
           <div class="price"><p>R$ ${price}</p></div>
           <div class="buttons" style="display: flex; flex-direction: column; gap: .8rem">
-            <button onclick="sendWhats()" class="btn" style="font-size: 1em">
+            <button id="cardBuy" class="btn" style="font-size: 1em">
               <i class="ri-whatsapp-line" style="font-size: 1.1em; font-weight: 300;"></i> 
               Comprar
             </button>

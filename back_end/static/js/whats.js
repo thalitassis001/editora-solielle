@@ -11,19 +11,6 @@
 //     document.getElementById('response').innerHTML = result;
 // })
 
-function openModal(book) {
-
-  modalTitle.textContent = book.title;
-  modalAuthor.textContent = book.author;
-  modalGenre.textContent = book.genre;
-  modalSinopse.textContent = book.synopsis;
-  modalPrice.textContent = `R$ ${book.price}`;
-
-  document.getElementById("modalBuy").onclick = () => {
-    sendWhats(book.title, book.price);
-  };
-}
-
 function sendWhats(title, price) {
   const phone = 5511948573463;
 
@@ -35,6 +22,22 @@ function sendWhats(title, price) {
   const url = `https://wa.me/${phone}/?text=${msgFormated}`;
   
   window.open(url, '_blank');
+}
+
+function openModal(book) {
+
+  modalTitle.textContent = book.title;
+  modalAuthor.textContent = book.author;
+  modalGenre.textContent = book.genre;
+  modalSinopse.textContent = book.synopsis;
+  modalPrice.textContent = `R$ ${book.price}`;
+
+  document.getElementById("modalBuy").onclick = () => {
+    sendWhats(book.title, book.price);
+  };
+  document.getElementById("cardBuy").onclick = () => {
+    sendWhats(book.title, book.price);
+  };
 }
 
 function finalizePurchase() {
