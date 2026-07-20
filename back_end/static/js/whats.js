@@ -19,27 +19,9 @@ function sendWhats(title, price) {
   const text = `Olá! Me chamo (seu nome).\nVim pelo site da *Solielle* e gostaria de comprar o livro *${title}* por R$${formattedPrice}.\nPoderia me ajudar com a compra?`;
 
   const msgFormated = encodeURIComponent(text);
-  const url = `https://wa.me/${phone}/?text=${encodeURIComponent(text)}`;
+  const url = `https://wa.me/${phone}/?text=${msgFormated}`;
   
   window.open(url, '_blank');
-}
-
-function openModal(book) {
-
-  modalTitle.textContent = book.title;
-  modalAuthor.textContent = book.author;
-  modalGenre.textContent = book.genre;
-  modalSinopse.textContent = book.synopsis;
-  modalPrice.textContent = `R$ ${parseFloat(book.price).toFixed(2).replace(".", ",")}`;
-  modalCover.src = book.cover;
-
-  const modalBuy = document.getElementById("modalBuy");
-
-  modalBuy.onclick = () => {
-    sendWhats(book.title, book.price);
-  };
-
-  modal.style.display = "flex";
 }
 
 function finalizePurchase() {
