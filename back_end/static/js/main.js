@@ -259,19 +259,20 @@ document.addEventListener("click", e => {
     const book = BOOKS_DATA.find(b => b.title === title);
 
     if (book) {
-        modalCover.src = book.cover;
-        modalTitle.textContent = book.title;
-        modalAuthor.textContent = book.author;
-        modalGenre.textContent = book.genre;
-        modalSinopse.textContent = book.sinopse;
-        modalPrice.textContent = `R$ ${book.price.toFixed(2)}`;
-        
-        modalBuy.onclick = null; 
-        modalBuy.onclick = () => {
-          window.open(book.link, "_blank");
-        };
+      modalTitle.textContent = book.title;
+      modalAuthor.textContent = book.author;
+      modalGenre.textContent = book.genre;
+      modalSinopse.textContent = book.synopsis;
+      modalPrice.textContent = `R$ ${parseFloat(book.price).toFixed(2).replace(".", ",")}`;
+      modalCover.src = book.cover;
 
-        modal.style.display = "flex";
+      const modalBuy = document.getElementById("modalBuy");
+
+      modalBuy.onclick = () => {
+        sendWhats(book.title, book.price);
+      };
+
+      modal.style.display = "flex";
     }
 });
 
