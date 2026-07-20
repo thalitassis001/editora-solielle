@@ -112,7 +112,7 @@ const highlight = (text, q) => {
 // ======= RENDERIZAÇÃO =======
 const booksGrid = $('#books-grid');
 const renderBooks = (list) => {
-  booksGrid.innerHTML = list.map(b => {
+  booksGrid.innerHTML = list.map((b, index) => {
     const price = parseFloat(b.price).toFixed(2).replace('.', ','); // garante decimais e vírgula
     return `
       <article class="card" data-title="${b.title}" data-author="${b.author}" data-genre="${b.genre}">
@@ -134,7 +134,7 @@ const renderBooks = (list) => {
           <div class="meta">${b.author} • ${b.genre}</div>
           <div class="price"><p>R$ ${price}</p></div>
           <div class="buttons" style="display: flex; flex-direction: column; gap: .8rem">
-            <button id="cardBuy" class="btn" style="font-size: 1em">
+            <button class="btn cardBuy" data-index="${index}" style="font-size: 1em">
               <i class="ri-whatsapp-line" style="font-size: 1.1em; font-weight: 300;"></i> 
               Comprar
             </button>
@@ -146,6 +146,15 @@ const renderBooks = (list) => {
       </article>
     `;
   }).join('');
+
+  document.querySelectorAll(".cardBuy").forEach((button, index) => {
+
+    button.addEventListener("click", () => {
+        const book = list[index];
+        sendWhats(book.title, book.price);
+    });
+
+  });
 };
 
 const authorsGrid = $('#authors-grid');

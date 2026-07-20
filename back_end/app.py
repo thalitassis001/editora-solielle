@@ -8,7 +8,7 @@ from datetime import datetime
 app = Flask(__name__)
 CORS(app)
 
-MAINTENANCE_MODE = True;
+MAINTENANCE_MODE = False;
 
 @app.before_request
 def maintenance():
@@ -25,7 +25,6 @@ def shutdown_session(exception=None):
 @app.route('/')
 def index():
     return render_template('index.html')
-
 
 @app.route('/api/novidades')
 def novidades():
