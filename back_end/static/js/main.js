@@ -134,8 +134,8 @@ const renderBooks = (list) => {
           <div class="meta">${b.author} • ${b.genre}</div>
           <div class="price"><p>R$ ${price}</p></div>
           <div class="buttons" style="display: flex; flex-direction: column; gap: .8rem">
-            <button onclick="window.location.href='${b.link}'" class="btn" style="font-size: 1em">
-              <i class="ri-amazon-fill" style="font-size: 1.1em; font-weight: 300;"></i> 
+            <button onclick="sendWhats()" class="btn" style="font-size: 1em">
+              <i class="ri-whatsapp-fill" style="font-size: 1.1em; font-weight: 300;"></i> 
               Comprar
             </button>
             <button class="btn btn-add" data-id="${b.id}" style="background-color: #75B9B0">
