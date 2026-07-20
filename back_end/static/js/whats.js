@@ -24,6 +24,24 @@ function sendWhats(title, price) {
   window.open(url, '_blank');
 }
 
+function openModal(book) {
+
+  modalTitle.textContent = book.title;
+  modalAuthor.textContent = book.author;
+  modalGenre.textContent = book.genre;
+  modalSinopse.textContent = book.synopsis;
+  modalPrice.textContent = `R$ ${parseFloat(book.price).toFixed(2).replace(".", ",")}`;
+  modalCover.src = book.cover;
+
+  const modalBuy = document.getElementById("modalBuy");
+
+  modalBuy.onclick = () => {
+    sendWhats(book.title, book.price);
+  };
+
+  modal.style.display = "flex";
+}
+
 function finalizePurchase() {
   if (cart.length === 0) {
     alert("Seu carrinho está vazio! Adicione algum livro antes de finalizar a compra 🌸");
