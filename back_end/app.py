@@ -8,7 +8,7 @@ from datetime import datetime
 app = Flask(__name__)
 CORS(app)
 
-MAINTENANCE_MODE = False;
+MAINTENANCE_MODE = True;
 
 @app.before_request
 def maintenance():
