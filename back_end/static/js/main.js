@@ -133,7 +133,7 @@ const renderBooks = (list) => {
           <h3>${b.title}</h3>
           <div class="meta">${b.author} • ${b.genre}</div>
           <div class="price"><p>R$ ${price}</p></div>
-          <div class="buttons" style="display: flex; flex-direction: column; gap: .8rem">
+          <div class="buttons" style="display: flex; flex-direction: column; gap: .8rem; margin-top: auto;">
             <button class="btn cardBuy" data-index="${index}" style="font-size: 1em">
               <i class="ri-whatsapp-line" style="font-size: 1.1em; font-weight: 300;"></i> 
               Comprar

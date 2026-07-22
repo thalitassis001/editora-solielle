@@ -72,10 +72,6 @@ i {
     width: 140px;
 }
 
-.cardBuy {
-    margin-top: auto;
-}
-
 .btn {
     background: var(--primary-color);
     color: var(--bg-color);
