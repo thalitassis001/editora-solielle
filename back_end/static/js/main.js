@@ -130,10 +130,12 @@ const renderBooks = (list) => {
           </div>
         </div>
         <div class="body">
-          <h3>${b.title}</h3>
-          <div class="meta">${b.author} • ${b.genre}</div>
-          <div class="price"><p>R$ ${price}</p></div>
-          <div class="buttons" style="display: flex; flex-direction: column; gap: .8rem; margin-top: auto;">
+          <div class="body-text">
+            <h3>${b.title}</h3>
+            <div class="meta">${b.author} • ${b.genre}</div>
+            <div class="price"><p>R$ ${price}</p></div>
+          </div>
+          <div class="buttons">
             <button class="btn cardBuy" data-index="${index}" style="font-size: 1em">
               <i class="ri-whatsapp-line" style="font-size: 1.1em; font-weight: 300;"></i> 
               Comprar
@@ -167,16 +169,18 @@ const renderAuthors = (list) => {
                 <h2>${a.emoji} ${a.name}</h2>
             </div>
             <div class="card-back">
-                <div class="avatar" style="display: flex; align-items: center; gap: 40%;">
+                <div class="avatar">
                     <img src="${a.avatar}" id="icon-author" alt="Foto de ${a.name}">
-                    <img src="${a.pet}" alt="Mascote de ${a.name}" class="pet" width="${a.width}">
+                    <img src="${a.pet}" alt="Mascote de ${a.name}" class="pet">
                 </div>
-                <h3>${a.emoji} ${a.name}</h3>
-                <p>${a.bio}</p>
-                <button onclick="window.location.href='${a.link}'" class="account-btn" id="${a.emoji}">
-                  <i class="ri-instagram-line"></i>
-                  ${a.account}
-                </button>
+                <div class="card-back-content">
+                  <h3>${a.emoji} ${a.name}</h3>
+                  <p>${a.bio}</p>
+                  <button onclick="window.location.href='${a.link}'" class="account-btn" id="${a.emoji}">
+                    <i class="ri-instagram-line"></i>
+                    ${a.account}
+                  </button>
+                </div>
             </div>
         </div>
     </article>
@@ -189,11 +193,11 @@ const renderPosts = (list) => {
     postsList.innerHTML = list.map(p => `
     <article class="post reveal" data-id="${p.id}">
       <img src="${p.cover}" alt="Imagem do post ${p.title}">
-      <div style="padding: .7rem; display:flex; flex-direction:column; justify-content: space-between; gap:.4rem;">
-        <h3 style="font-size: 1em;">${p.title}</h3>
-        <p class="muted" style="font-size: .8em;">${p.excerpt}</p>
-        <a class="btn more" style="display: flex; align-items: center; gap: .8rem; font-size: .9em; padding: .7rem;">
-            Ler mais <i class="ri-arrow-right-long-line" style="font-size: 1.4em;"></i>
+      <div class="post-content">
+        <h3>${p.title}</h3>
+        <p class="muted">${p.excerpt}</p>
+        <a class="btn more">
+            Ler mais <i class="ri-arrow-right-long-line"></i>
         </a>
       </div>
     </article>
