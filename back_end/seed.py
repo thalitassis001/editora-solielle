@@ -70,16 +70,16 @@ def seed_db():
         created_at=now - timedelta(hours=33)
     )
 
-    autor3 = Author(
-        name= 'Sofia Mendes',
-        avatar= 'static/img/avatar_sofia.jpeg',
-        pet= 'static/img/Pooh_Solielle.png',
-        emoji= '🌻',
-        bio= 'A mente inquieta e comunicativa, cheia de ideias e estratégias para levar histórias mais longe.<br><br> Ama desenhar e escrever, encontrou na criação uma forma de se expressar e se sentir em paz. Cuida das palavras e ideias para que transmitam verdade e acolhimento.',
-        account= '@soffi_mgs',
-        link = 'https://www.instagram.com/soffi_mgs/?hl=pt-br',
-        created_at=now - timedelta(hours=32)
-    )
+    # autor3 = Author(
+    #     name= 'Sofia Mendes',
+    #     avatar= 'static/img/avatar_sofia.jpeg',
+    #     pet= 'static/img/Pooh_Solielle.png',
+    #     emoji= '🌻',
+    #     bio= 'A mente inquieta e comunicativa, cheia de ideias e estratégias para levar histórias mais longe.<br><br> Ama desenhar e escrever, encontrou na criação uma forma de se expressar e se sentir em paz. Cuida das palavras e ideias para que transmitam verdade e acolhimento.',
+    #     account= '@soffi_mgs',
+    #     link = 'https://www.instagram.com/soffi_mgs/?hl=pt-br',
+    #     created_at=now - timedelta(hours=32)
+    # )
 
     post1 = Post(
         title='Lançamentos do mês', excerpt='Confira os livros que chegam às prateleiras este mês.', cover='static/img/lançamentos.png', created_at=now - timedelta(hours=31)
@@ -147,6 +147,12 @@ def seed_db():
     recommendation8 = Recommendation(
         title="Quais são e como funcionam os serviços da empresa?",
         text="1️⃣ Diagramação<br><strong>Organizamos o conteúdo do seu livro para ficar bonito e fácil de ler.</strong><br>Escolhemos fontes que combinam com a proposta da obra e cuidamos de margens, espaçamento e alinhamento para dar conforto na leitura. Também estruturamos páginas, cabeçalhos e sumário de forma clara e funcional.<strong>No final, o livro fica com um visual profissional e com a sua identidade.</strong><br><br>2️⃣ Capa<br><strong>Criamos capas que chamam atenção e representam bem a história.</strong><br>Fazemos capa completa para livro físico (frente, lombada e verso) e também para e-book. O design é personalizado: escolhemos tipografia, cores e composição de acordo com o gênero e a proposta do livro. Podemos incluir ilustrações ou editar imagens conforme o briefing.<strong>Você recebe tudo pronto para publicar ou imprimir.</strong><br><br><strong>Diferencial:</strong><br>Cada capa é pensada com cuidado, equilibrando estética e significado.<br><br><strong>Prazo:</strong><br>De 7 a 15 dias úteis (depende da complexidade).<br><br>3️⃣ Divulgação<br><strong>Ajudamos seu livro a chegar nas pessoas certas.</strong><br>Criamos teasers, sinopses e materiais de divulgação para antes, durante e depois do lançamento. Também planejamos estratégias de engajamento (como sorteios, reels e interações) e podemos apoiar parcerias com influenciadores literários.<strong>Tudo é feito de forma personalizada, sem fórmulas prontas.</strong><br><br><strong>Diferencial:</strong><br>Divulgação feita com cuidado real, pensando no leitor e não só em números.<br><br>4️⃣ Contato<br><strong>Fale com a gente de forma simples.</strong><br>Se quiser orçamento, tirar dúvidas ou conversar sobre seu projeto, é só chamar. Pode mandar direct ou e-mail.<br><strong>Estamos disponíveis para te ajudar.</strong>",
+        created_at=now - timedelta(hours=20)
+    )
+
+    recommendation9 = Recommendation(
+        title="5 coisas que fazem seu livro parecer AMADOR e como evitar.",
+        text="1️⃣ Excesso de explicação<br><strong>Não explique absolutamente tudo para o leitor.</strong><br>Um dos erros mais comuns é dizer exatamente o que o personagem está sentindo, pensando ou vivendo, sem deixar espaço para interpretação. Em vez de escrever “Ela estava triste porque seu pai havia morrido e isso a deixava muito triste”, deixe a cena carregar parte desse sentimento através das ações, reações e do contexto.<strong>Confie no leitor: nem tudo precisa ser dito para ser entendido.</strong><br><br>2️⃣ Diálogos artificiais<br><strong>Personagens não precisam falar como se estivessem apresentando um trabalho escolar.</strong><br>Um diálogo natural tem ritmo, personalidade e, muitas vezes, informações que ficam subentendidas. Pessoas interrompem umas às outras, hesitam, mudam de assunto e nem sempre explicam tudo perfeitamente.<strong>Faça cada personagem falar de uma forma que combine com quem ele é.</strong><br><br>3️⃣ Personagens sem profundidade<br><strong>O protagonista não pode ser apenas um boneco empurrado pelo enredo.</strong><br>Para que a história tenha força, o personagem precisa ter motivações e medos reais. Ele precisa querer alguma coisa, temer alguma coisa e tomar decisões que tenham consequências verdadeiras na narrativa.<strong>Dê vida e camadas aos seus personagens através de escolhas reais.</strong><br><br>4️⃣ Falta de revisão<br><strong>Escrever é criar. Revisar é lapidar.</strong><br>Um texto sem revisão compromete toda a experiência de leitura. Fique atento à ortografia, pontuação, repetições desnecessárias, coerência e ao ritmo da narrativa antes de considerar a obra finalizada.<strong>Passe pelo seu texto com cuidado ajustando cada detalhe.</strong><br><br>5️⃣ Tentar parecer profundo o tempo todo<br><strong>Frases filosóficas a cada três linhas não tornam automaticamente uma obra profunda.</strong><br>O excesso de reflexões forçadas pode deixar a leitura cansativa e artificial. Às vezes, uma cena simples, bem construída e verdadeira diz muito mais do que vários parágrafos cheios de conceitos abstratos.<strong>Deixe a profundidade surgir naturalmente da história.</strong><br><br><strong>Lembre-se:</strong><br>Escrever de forma profissional não significa usar palavras difíceis ou explicar tudo perfeitamente. Significa saber o que mostrar, o que dizer e, principalmente, o que deixar o leitor descobrir sozinho.",
         created_at=now - timedelta(hours=20)
     )
 
@@ -265,10 +271,10 @@ def seed_db():
     )
 
     db_session.add_all([livro1, livro2, livro3])
-    db_session.add_all([autor1, autor2, autor3])
+    db_session.add_all([autor1, autor2])
     db_session.add_all([post1, post2, post3])
     db_session.add_all([launch1])
-    db_session.add_all([recommendation1, recommendation2, recommendation3, recommendation4, recommendation5, recommendation6, recommendation7, recommendation8])
+    db_session.add_all([recommendation1, recommendation2, recommendation3, recommendation4, recommendation5, recommendation6, recommendation7, recommendation8, recommendation9])
     db_session.add_all([article1, article2, article3, article4, article5, article6, article7, article8, article9, article10, article11, article12, article13, article14, article15, article16, article17, article18, article19])
     db_session.commit()
 
