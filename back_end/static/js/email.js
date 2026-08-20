@@ -18,4 +18,4 @@ function sendEmail(e) {
         alert("Erro ao enviar. Tente novamente.")
         console.log(error)
     }); 
-}   
+}
