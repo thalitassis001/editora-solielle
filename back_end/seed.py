@@ -54,8 +54,8 @@ def seed_db():
         pet= 'static/img/Garfield_Solielle.png',
         emoji= '🏵️',
         bio= 'O coração das palavras, que vive a escrita intensamente, trazendo emoção, drama e paixão pela literatura.<br><br> Ama escrever, se emociona com histórias e, na Solielle, cuida dos textos com carinho e respeito, para que as palavras cheguem a quem precisa lê-las.',
-        account= '@zthaliii',
-        link = 'https://www.instagram.com/zthaliii/?hl=pt-br',
+        account= '@tmvalenteauthor',
+        link = 'https://www.instagram.com/tmvalenteauthor/',
         created_at=now - timedelta(hours=34)
     )
 
@@ -153,7 +153,7 @@ def seed_db():
     recommendation9 = Recommendation(
         title="5 coisas que fazem seu livro parecer AMADOR e como evitar.",
         text="1️⃣ Excesso de explicação<br><strong>Não explique absolutamente tudo para o leitor.</strong><br>Um dos erros mais comuns é dizer exatamente o que o personagem está sentindo, pensando ou vivendo, sem deixar espaço para interpretação. Em vez de escrever “Ela estava triste porque seu pai havia morrido e isso a deixava muito triste”, deixe a cena carregar parte desse sentimento através das ações, reações e do contexto. <strong>Confie no leitor: nem tudo precisa ser dito para ser entendido.</strong><br><br>2️⃣ Diálogos artificiais<br><strong>Personagens não precisam falar como se estivessem apresentando um trabalho escolar.</strong><br>Um diálogo natural tem ritmo, personalidade e, muitas vezes, informações que ficam subentendidas. Pessoas interrompem umas às outras, hesitam, mudam de assunto e nem sempre explicam tudo perfeitamente. <strong>Faça cada personagem falar de uma forma que combine com quem ele é.</strong><br><br>3️⃣ Personagens sem profundidade<br><strong>O protagonista não pode ser apenas um boneco empurrado pelo enredo.</strong><br>Para que a história tenha força, o personagem precisa ter motivações e medos reais. Ele precisa querer alguma coisa, temer alguma coisa e tomar decisões que tenham consequências verdadeiras na narrativa. <strong>Dê vida e camadas aos seus personagens através de escolhas reais.</strong><br><br>4️⃣ Falta de revisão<br><strong>Escrever é criar. Revisar é lapidar.</strong><br>Um texto sem revisão compromete toda a experiência de leitura. Fique atento à ortografia, pontuação, repetições desnecessárias, coerência e ao ritmo da narrativa antes de considerar a obra finalizada. <strong>Passe pelo seu texto com cuidado ajustando cada detalhe.</strong><br><br>5️⃣ Tentar parecer profundo o tempo todo<br><strong>Frases filosóficas a cada três linhas não tornam automaticamente uma obra profunda.</strong><br>O excesso de reflexões forçadas pode deixar a leitura cansativa e artificial. Às vezes, uma cena simples, bem construída e verdadeira diz muito mais do que vários parágrafos cheios de conceitos abstratos. <strong>Deixe a profundidade surgir naturalmente da história.</strong><br><br><strong>Lembre-se:</strong><br>Escrever de forma profissional não significa usar palavras difíceis ou explicar tudo perfeitamente. Significa saber o que mostrar, o que dizer e, principalmente, o que deixar o leitor descobrir sozinho.",
-        created_at=now
+        created_at=now - timedelta(hours=19)
     )
 
     article1 = Article(
@@ -270,12 +270,18 @@ def seed_db():
         created_at=now - timedelta(hours=1)
     )
 
+    article20 = Article(
+        img="static/img/artigo20.png",
+        caption="Hoje, no Sobre o Escritor, mergulhamos no universo de Clarice Lispector — sua escrita, sua atmosfera e essa liberdade que parece existir justamente naquilo que ainda não conseguimos nomear. ☕📖",
+        created_at=now
+    )
+
     db_session.add_all([livro1, livro2, livro3])
     db_session.add_all([autor1, autor2])
     db_session.add_all([post1, post2, post3])
     db_session.add_all([launch1])
     db_session.add_all([recommendation1, recommendation2, recommendation3, recommendation4, recommendation5, recommendation6, recommendation7, recommendation8, recommendation9])
-    db_session.add_all([article1, article2, article3, article4, article5, article6, article7, article8, article9, article10, article11, article12, article13, article14, article15, article16, article17, article18, article19])
+    db_session.add_all([article1, article2, article3, article4, article5, article6, article7, article8, article9, article10, article11, article12, article13, article14, article15, article16, article17, article18, article19, article20])
     db_session.commit()
 
     print("Banco populado! 👍")
