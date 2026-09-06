@@ -31,7 +31,7 @@ def seed_db():
         author="Thalita Monteiro",
         genre="Memórias",
         synopsis="Este livro revela, de forma franca, a trajetória de quem cresceu entre traumas, instabilidade emocional e a luta diária contra a depressão. Entre relatos de autodestruição, confusão interna e solidão, também surgem momentos de resistência: amizades que seguraram a dor, o apoio imperfeito da mãe e a escrita como refúgio quando nada mais fazia sentido. Não é uma história de superação idealizada, mas um testemunho real de quem já se sentiu quebrado, exausto e sem saída — e ainda assim encontrou pequenos motivos para continuar.",
-        price=41.25,
+        price=45.25,
         cover="static/img/Onde_o_Tempo_faz_a_Curva.jpg",
         # link="https://www.amazon.com.br/Onde-Tempo-Curva-Thalita-Monteiro-ebook/dp/B0FDZ9DHQS/ref=sr_1_1?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2NGPKH5138FFE&dib=eyJ2IjoiMSJ9._RZdKZAd-ggoMF-Z0ONPxQ.rssaxnx5zK22jSir0mCkK_Ndz-DaSbC1CHIgAvZ7VUs&dib_tag=se&keywords=Onde+o+tempo+faz+a+curva&qid=1775266324&sprefix=onde+o+tempo+faz+a+curv%2Caps%2C207&sr=8-1",
         created_at=now - timedelta(hours=35)
@@ -42,7 +42,7 @@ def seed_db():
         author="Gabrielle Corrêa",
         genre="Transtornos",
         synopsis="Na Residência Psique, um refúgio voltado à saúde mental, hóspedes enfrentam seus traumas e emoções profundas sob o olhar sensível de Luna, a recepcionista que narra histórias de dor, superação e empatia. Um retrato humano sobre reconstrução interior e o poder de ouvir e ser ouvido.",
-        price=35.70,
+        price=41.25,
         cover="static/img/Check-in_Mental.jpg",
         # link="https://www.amazon.com.br/Check-Mental-Cada-quarto-luta/dp/6598927609/ref=sr_1_1?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=184FXV4KXPHHX&dib=eyJ2IjoiMSJ9.K8VqxLGGGaNGswV_krLh1OVKJbBdg7w6pANXSGN8QnIiHN1LQLlSJDbDc3YjR1JpC-PditQWozMPLe9tZSQZv0c_VXomK_UtTVZGgNLTPEoJCzamcyP-XZiojZ3TqwcVK0UcMdbMepjn2tGuJlS9b5RwbzEypR3Jlm_EGo6ZJRRKY5WDiaoPDTMGJCuqh4hoBpg8CDY9fcj2aPdKKjZDUxG-uZzPoMphfxG-bb2fUjFtMa3Siygf6e6eU9C6ic66p3-rZF7TSP0LEKOayE-UL1JhgBWp4uNk1jMW8A3CzFU.dM_4HjLWym1_ErvuIWU51jYIb02tRaEB5-n8gWFlfZw&dib_tag=se&keywords=check-in+Mental&qid=1767725697&sprefix=check-in+mental%2Caps%2C209&sr=8-1&ufe=app_do%3Aamzn1.fos.6d798eae-cadf-45de-946a-f477d47705b9",
         created_at=now - timedelta(hours = 35)
